@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Souvik Sengupta | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+
+  <header id="header">
+    <div class="container">
+      <img src="assets/profile.jpg" alt="Souvik Sengupta" class="profile-img"/>
+      <h1>Souvik Sengupta</h1>
+      <p>MCA from Adamas University | BCA from JIS College of Engineering</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#results">Results</a>
+        <a href="#contact">Contact</a>
+        <a href="#cv">Download CV</a>
+        <A href="#projects">projects</A>
+
+
+      </nav>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Passionate software developer with expertise in Java, Python,
+        web development (HTML, CSS, JavaScript), and MySQL.
+        Strong foundation in computer science and proven track record
+        of delivering quality projects.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills & Certifications</h2>
+      <ul class="skills-list">
+        <li>Java</li>
+        <li>Python</li>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>MySQL</li>
+        <li>Windows OS</li>
+        <li>NPTEL Soft Skill Certificate</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <h3>MCA, Adamas University</h3>
+        <p>Passed out: July 2, 2025 | CGPA: 7.57</p>
+      </div>
+      <div class="edu-item">
+        <h3>BCA, JIS College of Engineering</h3>
+        <p>Passed out: June 30, 2022 | CGPA: 9.16</p>
+      </div>
+    </div>
+  </section>
+
+<section id="results" class="section">
+  <div class="container">
+    <h2>Semester Results</h2>
+    <div class="results-grid">
+      <div class="result-block">
+        <h3>BCA Results</h3>
+        <ul>
+          <li>SEM1: 6.83 – <a href="assets/marksheets/BCA-SEM1.pdf" target="_blank">View Marksheet</a></li>
+          <li>SEM2: 9.61 – <a href="assets/marksheets/BCA-SEM2.pdf" target="_blank">View Marksheet</a></li>
+          <li>SEM3: 9.55 – <a href="assets/marksheets/BCA-SEM3.pdf" target="_blank">View Marksheet</a></li>
+          <li>SEM4: 9.41 – <a href="assets/marksheets/BCA-SEM4.pdf" target="_blank">View Marksheet</a></li>
+          <li>SEM5: 9.62 – <a href="assets/marksheets/BCA-SEM5.pdf" target="_blank">View Marksheet</a></li>
+          <li>SEM6: 9.69 – <a href="assets/marksheets/BCA-SEM6.pdf" target="_blank">View Marksheet</a></li>
+        </ul>
+      </div>
+      <div class="result-block">
+        <h3>MCA Results</h3>
+        <ul>
+          <li>SEM1: 7.04 – <a href="assets/marksheets/MCA-SEM1.pdf" target="_blank">View Marksheet</a></li>
+          <li>SEM2: 6.70 – <a href="assets/marksheets/MCA-SEM2.pdf" target="_blank">View Marksheet</a></li>
+          <li>SEM3: 7.57 – <a href="assets/marksheets/MCA-SEM3.pdf" target="_blank">View Marksheet</a></li>
+          <li>SEM4: 7.57 – <a href="assets/marksheets/MCA-SEM4.pdf" target="_blank">View Marksheet</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h3>Mental Health Prediction System</h3>
+        <p>
+          AI-powered web app that analyzes facial expressions and psychometric responses to predict emotional well-being across age groups.  
+          • Emotion detection via DeepFace  
+          • Age classification using a custom PyTorch CNN  
+          • Streamlit UI with OpenCV image processing  
+          • Alerts for hunger, mood, crime risk, and depression  
+        </p>
+        <p class="tech-stack">
+          <strong>Tech:</strong> Python 3.8+, Streamlit, OpenCV, NumPy, PyTorch, Torchvision, DeepFace  
+        </p>
+        <a href="https://github.com/souviksengupta801/MENTAL-HEALTH-PREDICTION-SYSTEM" target="_blank" class="project-link">
+          View Repository
+        </a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h3>Online Admission System</h3>
+        <p>
+          Web-based portal for student applications and document uploads, with managerial approval workflow and automated email notifications.  
+          • Student registration, application form & OMR processing  
+          • Admin dashboard for approval, CUEE marks entry, admit-card generation  
+          • Email integration for status updates  
+        </p>
+        <p class="tech-stack">
+          <strong>Tech:</strong> PHP, MySQL, JavaScript, jQuery, Bootstrap, AJAX  
+        </p>
+        <a href="https://github.com/souviksengupta801/Online-Admission-System" target="_blank" class="project-link">
+          View Repository
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="cv" class="section">
+  <div class="container" style="text-align:center;">
+    <h2>Download My CV</h2>
+    <a href="assets/YourCV.pdf" download class="cv-download-btn">
+      <span style="font-size:1.25rem;">⬇️</span> Download CV (PDF)
+    </a>
+  </div>
+</section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a href="mailto:souviksengupta801@gmail.com">souviksengupta801@gmail.com</a></li>
+        <li><strong>Phone:</strong> +91 6291867951</li>
+        <li><strong>Location:</strong> Kolkata, Ichapur, 24 Parganas (N), WB, India</li>
+        <li><strong>LinkedIn:</strong> <a href="#" id="linkedin-link">Your LinkedIn URL</a></li>
+        <li><strong>GitHub:</strong> <a href="#" id="github-link">Your GitHub URL</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Souvik Sengupta. All rights reserved.</p>
+  </footer>
+</body>
+</html>

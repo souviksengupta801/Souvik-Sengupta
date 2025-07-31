@@ -1,0 +1,414 @@
+/* Import Modern Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* CSS Variables for Theming */
+:root {
+  --clr-bg: #f9f9f9;
+  --clr-text: #333;
+  --clr-primary: #004466;
+  --clr-accent: #0066cc;
+  --clr-section-bg: #fff;
+  --clr-card-bg: #fff;
+  --transition: 0.3s;
+}
+
+/* Dark Mode via prefers-color-scheme */
+@media [data-theme="dark"] /* Import Modern Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Light-mode (default) variables */
+:root {
+  --clr-bg: #f9f9f9;
+  --clr-text: #333;
+  --clr-primary: #004466;
+  --clr-accent: #0066cc;
+  --clr-section-bg: #fff;
+  --clr-card-bg: #fff;
+  --transition: 0.3s;
+}
+
+/* Dark-mode variables when [data-theme="dark"] is set */
+html[data-theme="dark"] {
+  --clr-bg: #121212;
+  --clr-text: #e0e0e0;
+  --clr-primary: #90caf9;
+  --clr-accent: #bb86fc;
+  --clr-section-bg: #1e1e1e;
+  --clr-card-bg: #1f1f1f;
+}
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+  transition: background var(--transition), color var(--transition);
+}
+.container { /* … unchanged … */ }
+
+/* Theme Toggle Button */
+#theme-toggle { /* … unchanged … */ }
+
+/* Header, nav, sections, skills, cards, footer */
+/* … keep all hover effects and other styles exactly as before … */
+
+
+/* Apply Variables */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+  transition: background var(--transition), color var(--transition);
+}
+.container {
+  width: 90%; max-width: 1000px; margin: auto; padding: 2rem 0;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  position: fixed; top: 1rem; right: 1rem;
+  background: var(--clr-card-bg);
+  border: none; padding: 0.5rem; font-size: 1.25rem;
+  cursor: pointer; border-radius: 50%;
+  transition: background var(--transition), transform var(--transition);
+}
+#theme-toggle:hover {
+  transform: scale(1.1);
+  background: var(--clr-primary);
+  color: #fff;
+}
+
+/* Header */
+#header {
+  background: var(--clr-primary);
+  color: #fff; text-align: center; padding: 3rem 0;
+  transition: background var(--transition);
+}
+.profile-img {
+  width: 150px; height: 150px; border-radius: 50%;
+  object-fit: cover; border: 4px solid #fff; margin-bottom: 1rem;
+}
+#header nav a {
+  color: rgba(255,255,255,0.8);
+  margin: 0 1rem; text-decoration: none;
+  font-weight: 600; position: relative;
+  transition: color var(--transition);
+}
+#header nav a::after {
+  content: ''; display: block;
+  width: 0; height: 2px; background: #fff;
+  position: absolute; bottom: -4px; left: 50%;
+  transform: translateX(-50%);
+  transition: width var(--transition);
+}
+#header nav a:hover {
+  color: #fff;
+}
+#header nav a:hover::after {
+  width: 50%;
+}
+
+/* Section Styling */
+.section {
+  background: var(--clr-section-bg);
+  margin-top: 2rem; border-radius: 8px;
+  padding: 2rem 1rem;
+  transition: background var(--transition);
+}
+.section:nth-child(even) {
+  background: var(--clr-card-bg);
+}
+.section h2 {
+  margin-bottom: 1rem;
+  color: var(--clr-primary);
+  text-align: center;
+}
+
+/* Skills List */
+.skills-list {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  list-style: none;
+}
+.skills-list li {
+  background: var(--clr-primary);
+  color: #fff; margin: 0.5rem; padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background var(--transition), transform var(--transition);
+}
+.skills-list li:hover {
+  background: var(--clr-accent);
+  transform: translateY(-4px);
+}
+
+/* Education & Results Cards */
+.edu-item, .result-block {
+  background: var(--clr-card-bg);
+  border-radius: 8px; padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: box-shadow var(--transition), background var(--transition);
+}
+.edu-item:hover, .result-block:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.result-block h3 {
+  margin-bottom: 1rem;
+  color: var(--clr-primary);
+  text-align: center;
+}
+.result-block a {
+  color: var(--clr-accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.result-block a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center; padding: 1rem 0;
+  background: var(--clr-primary); color: #fff;
+  margin-top: 2rem;
+  transition: background var(--transition);
+}
+.results-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;               /* Increased from 2rem to 3rem for wider spacing */
+  justify-content: center;
+}
+.result-block {
+  background: var(--clr-card-bg, #fff);
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 380px;            /* Increased from 300px to 380px for more width */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+.result-block h3 {
+  margin-bottom: 1rem;
+  color: var(--clr-primary, #004466);
+  text-align: center;
+}
+.result-block ul {
+  list-style: none;
+  padding-left: 0;
+}
+.result-block li {
+  margin-bottom: 0.75rem;
+}
+.result-block a {
+  color: var(--clr-accent, #0066cc);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.result-block a:hover {
+  text-decoration: underline;
+}
+/* Existing .result-block li rules + hover effect */
+.result-block li {
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.result-block li:hover {
+  background-color: var(--clr-primary, #004466);
+  color: white;
+  transform: scale(1.05);
+}
+
+.result-block li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.result-block li:hover a {
+  color: #fff;
+  text-decoration: underline;
+}
+.result-block li {
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: default;
+  position: relative;
+}
+
+.result-block li:hover {
+  background-color: var(--clr-primary, #004466);
+  color: white;
+  transform: scale(1.05);
+}
+
+.result-block li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s, background 0.3s, border-radius 0.3s;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.result-block li:hover a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Unique hover effect for only the link */
+.result-block li a:hover {
+  background-color: #ff9900; /* or use #33cc99 or any accent you prefer */
+  color: #fff;
+  text-decoration: underline;
+  border-radius: 4px;
+}
+.cv-download-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  background: var(--clr-primary, #004466);
+  color: #fff;
+  padding: 0.75rem 2.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.cv-download-btn:hover {
+  background: var(--clr-accent, #0066cc);
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+/* Projects Section */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.project-card {
+  background: var(--clr-card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 380px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.project-card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--clr-primary);
+}
+.project-card p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.project-card .tech-stack {
+  font-size: 0.9rem;
+  color: var(--clr-text);
+}
+.project-card .project-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--clr-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.project-card .project-link:hover {
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+/* Import an accent font for project headings */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Slab:wght@500&display=swap');
+
+/* Projects Section – Overrides */
+#projects {
+  background: var(--clr-section-bg);
+  padding: 3rem 0;
+}
+
+#projects h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.5rem;
+  color: var(--clr-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.5rem;         /* Increased gap for more spacing between cards */
+  justify-content: center;
+}
+
+.project-card {
+  background: var(--clr-card-bg);
+  border: 2px solid var(--clr-primary);  /* Subtle border accent */
+  border-radius: 10px;
+  padding: 2rem;       /* Increased padding for breathing space */
+  width: 420px;        /* Widened cards */
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  border-color: var(--clr-accent);
+}
+
+.project-card h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.6rem;
+  color: var(--clr-accent);
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--clr-text);
+  margin-bottom: 1.25rem; /* More space between paragraphs */
+}
+
+.project-card .tech-stack {
+  font-size: 0.95rem;
+  color: var(--clr-text);
+  margin-bottom: 1.25rem;
+}
+
+.project-card .project-link {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.project-card .project-link:hover {
+  background: var(--clr-accent);
+  transform: translateY(-2px);
+}
